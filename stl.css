@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:wght@400;600&display=swap");
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Poppin" sans-serif;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(#380038, #0cbaba);
+}
+.container{
+    max-width: 650px;
+    padding: 28px;
+    margin: 0 28px;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 6);
+    text-align: center;
+    color: rgb(113, 99, 186, 255);    
+}
+form{
+    padding-top: 120px;
+}
+.h2{
+    font-size: 26px;
+    font-weight: bold;
+    text-align: left;
+    color: rgb(113, 99, 186, 255);
+    padding-bottom: 8px;
+    border-radius: 2px solid linear-gradient(#380038, #0cbaba) ;
+}
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;    
+    text-transform: capitalize;
+}
+
+.input_box{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    padding-bottom: 15px;
+}
+.input_box select label, .gender_title{
+    width: 95%;
+    color: rgb(113, 99, 186, 255);
+    font-weight: bold;
+    margin: 5px 0;
+
+}
+.gender_title{
+    font-size: 16px;
+}
+.input_box input{
+    height: 40px;
+    width: 95%;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+.input_box input:is(:focus, :valid){
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 2);
+}
+.gender_category a{
+    text-decoration: none;
+    padding: 0 20px 0 5px;
+    font-size: 14px;
+}
+.gender_category{
+    color: #380038;
+    text-align: center;
+}
+.gender_category label, .gender_category input{
+    cursor: pointer;
+}
+.alart{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+.alart a{
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(21, 34, 39); 
+     
+}
+.alart a :hover{
+    font-weight: 900;
+    text-decoration: underline;
+    color: #002;
+}
+.button_container{
+    margin: 15px 240px;
+}
+.button_container button{
+    
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    display: block;
+    font-size: 20px;
+    color: rgb(113, 99, 186, 255);
+    background-image: linear-gradient(to right, #aa076b, #61045f );
+    cursor: pointer;
+    transition: 0.5s;    
+}
+.button_container button:hover{
+    background-image: linear-gradient(to right, #61045f, #aa076b);
+}
+
+@media(max-width:400px){
+    .container{
+        min-width: 280px;
+    }
+    .content{
+        max-height: 380px;
+        overflow: auto;
+    }
+    .input_box{
+        margin-bottom: 12px;
+        width: 100%;    
+    }
+    .input_box:nth-child(2n){
+        justify-content: space-between;
+    }
+    .gender_category{
+        display: flex;
+        justify-content: space-between;
+        width: 60%;
+    }
+    .content::-webkit-scrollbar{
+        width: 0px;
+    }
+}
